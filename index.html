@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny URL Converter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Tiny URL Converter</h1>
+      <p class="subtitle">Paste your long URL and get a short one instantly.</p>
+
+      <form id="urlForm" novalidate>
+        <label for="longUrl">Long URL</label>
+        <input id="longUrl" name="longUrl" type="url" placeholder="https://example.com/very/long/url" required />
+        <button type="submit" id="submitBtn">Convert</button>
+      </form>
+
+      <div id="loading" class="loading hidden" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Creating your tiny URL...</span>
+      </div>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <h2>Result</h2>
+        <p id="tinyUrlText"></p>
+        <pre id="rawResponse"></pre>
+      </section>
+
+      <p id="error" class="error hidden" aria-live="assertive"></p>
+    </section>
+  </main>
+
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+  <script src="app.js"></script>
+</body>
+
+</html>
