@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "https://kale-patil1006.app.n8n.cloud/webhook-test/tinyurl";
+const WEBHOOK_URL = "https://kale-patil1006.app.n8n.cloud/webhook/tinyurl";
 
 const form = document.getElementById("urlForm");
 const longUrlInput = document.getElementById("longUrl");
